@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hQk-Zk-dmh">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="TEB-ZW-12E">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="hQk-Zk-dmh" customClass="LoginViewController" customModule="AvantChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tHZ-Uu-KIR"/>
+                        <viewControllerLayoutGuide type="bottom" id="7ZT-wk-bI4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dVT-oe-ll4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BKk-Ye-vF3" customClass="LoginTextField" customModule="AvantChallenge" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="185" width="600" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="DdA-il-c5h"/>
+                                    <constraint firstAttribute="height" constant="50" id="Iza-Z1-cyL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="DdA-il-c5h"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BmX-VR-Pu8" customClass="LoginTextField" customModule="AvantChallenge" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="234" width="600" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJ0-Fk-iGv">
+                                <rect key="frame" x="0.0" y="314" width="600" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="LMY-iA-Ywe"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="validate" destination="hQk-Zk-dmh" eventType="touchUpInside" id="J61-kl-M5s"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KJ0-Fk-iGv" firstAttribute="top" secondItem="BmX-VR-Pu8" secondAttribute="bottom" constant="30" id="4va-DX-BTy"/>
+                            <constraint firstItem="KJ0-Fk-iGv" firstAttribute="height" secondItem="BmX-VR-Pu8" secondAttribute="height" id="D8K-I9-cAY"/>
+                            <constraint firstAttribute="centerX" secondItem="BmX-VR-Pu8" secondAttribute="centerX" id="EcB-lD-RVw"/>
+                            <constraint firstItem="BmX-VR-Pu8" firstAttribute="height" secondItem="BKk-Ye-vF3" secondAttribute="height" id="IzK-dw-gPF"/>
+                            <constraint firstAttribute="centerY" secondItem="BKk-Ye-vF3" secondAttribute="centerY" multiplier="1:0.7" id="J8P-eV-Jtf"/>
+                            <constraint firstAttribute="centerX" secondItem="BKk-Ye-vF3" secondAttribute="centerX" id="M9T-Ek-lN9"/>
+                            <constraint firstAttribute="centerY" secondItem="BmX-VR-Pu8" secondAttribute="centerY" multiplier="1:1.1" id="MZg-F6-clN"/>
+                            <constraint firstItem="BmX-VR-Pu8" firstAttribute="centerX" secondItem="BKk-Ye-vF3" secondAttribute="centerX" id="OhJ-6X-aQT"/>
+                            <constraint firstItem="BmX-VR-Pu8" firstAttribute="top" secondItem="BKk-Ye-vF3" secondAttribute="bottom" constant="-1" id="Sep-b6-G1N"/>
+                            <constraint firstItem="BmX-VR-Pu8" firstAttribute="top" secondItem="BKk-Ye-vF3" secondAttribute="bottom" constant="30" id="VhQ-51-hCN"/>
+                            <constraint firstItem="BKk-Ye-vF3" firstAttribute="leading" secondItem="dVT-oe-ll4" secondAttribute="leading" id="b5R-OX-5hO"/>
+                            <constraint firstAttribute="centerX" secondItem="KJ0-Fk-iGv" secondAttribute="centerX" id="jFr-VU-XjA"/>
+                            <constraint firstItem="BmX-VR-Pu8" firstAttribute="width" secondItem="BKk-Ye-vF3" secondAttribute="width" id="jGt-R2-X9g"/>
+                            <constraint firstAttribute="trailing" secondItem="BKk-Ye-vF3" secondAttribute="trailing" id="mNO-4z-aWG"/>
+                            <constraint firstItem="KJ0-Fk-iGv" firstAttribute="width" secondItem="BmX-VR-Pu8" secondAttribute="width" id="v6C-Rg-mXE"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="MZg-F6-clN"/>
+                                <exclude reference="VhQ-51-hCN"/>
+                                <exclude reference="D8K-I9-cAY"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="loginButton" destination="KJ0-Fk-iGv" id="ERh-eI-olj"/>
+                        <outlet property="passwordTextField" destination="BmX-VR-Pu8" id="Lng-Ss-97H"/>
+                        <outlet property="usernameTextField" destination="BKk-Ye-vF3" id="1TC-RN-zW5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WTL-jF-WBM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="552" y="468"/>
+        </scene>
+    </scenes>
+</document>
